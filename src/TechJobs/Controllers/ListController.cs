@@ -41,10 +41,14 @@ namespace TechJobs.Controllers
             {
                 JobFieldsViewModel jobFieldsViewModel = new JobFieldsViewModel();
 
-                IEnumerable<JobField> fields;
+                IEnumerable<JobField> fields; //this is an instance of a list called fields, its data type is JobField
+                //it will hold the jobs found from the search 
 
                 switch (column)
                 {
+                  //switch cases that take a column type and adds all jobs in jobdata that match to a list
+                  //while converting it to a jobfield object 
+                 
                     case JobFieldType.Employer:
                         fields = jobData.Employers.ToList().Cast<JobField>();
                         break;
@@ -60,7 +64,7 @@ namespace TechJobs.Controllers
                         break;
                 }
 
-                jobFieldsViewModel.Fields = fields;
+                jobFieldsViewModel.Fields = fields; //view model that will take all the jobs found and pass it to view 
                 jobFieldsViewModel.Title =  "All " + column + " Values";
                 jobFieldsViewModel.Column = column;
 

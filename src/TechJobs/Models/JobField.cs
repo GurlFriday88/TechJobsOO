@@ -38,7 +38,7 @@
                 return false;
             }
             
-            return (obj as JobField).ID == ID;
+            return (obj as JobField).ID == ID;  //returns the object arguement as a jobfield and sets the jobfield if to be equal to its self?
         }
 
         // override object.GetHashCode

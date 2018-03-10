@@ -18,4 +18,9 @@
         }
 
     }
+
 }
+
+//job class just declaires the job object that consists of the individual job columns  and allows their values to be set and returned. 
+// this class also sets the id of the job and increments each time an instance of a job is made
+//nextId is staic because the value needs to stay fixed so that each time a job is created its id number increases by one
